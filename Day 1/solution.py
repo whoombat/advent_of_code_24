@@ -1,5 +1,4 @@
-# Day 1 solution
-#
+"""Day 1 solution"""
 
 import pandas as pd
 
@@ -20,21 +19,21 @@ first_list.sort()
 second_list.sort()
 
 # part 1
-sum = 0
+SUM = 0
 for (first, second) in zip(first_list, second_list):
     abs_result = abs(first - second)
     # print("first:" + str(first) + " second:" + str(second) + " abs:" + str(abs_result))
-    sum += abs_result
+    SUM += abs_result
 
 
 # part 2
-similarity_score = 0
+SIMILARITY_SCORE = 0
 for first in first_list:
     for second in second_list:
         if first == second:
             # instead of counting the instances and multiplying, just add each time
-            similarity_score += first
+            SIMILARITY_SCORE += first
 
 
-print("Part 1 sum:" + str(sum))
-print("Part 2 similarity score:" + str(similarity_score))
+print("Part 1 sum:" + str(SUM))
+print("Part 2 similarity score:" + str(SIMILARITY_SCORE))
